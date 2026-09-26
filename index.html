@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211817">
+  <meta name="description" content="A little museum made with love.">
+  <title>Our Little Museum ♥</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="cursor-heart">♥</div>
+
+  <header class="nav">
+    <button class="brand" onclick="showRoom(0)">♥ <span id="navBrand">Our Little Museum</span></button>
+    <div class="room-counter"><span id="currentNo">00</span> / 08</div>
+  </header>
+
+  <main>
+    <!-- ROOM 0: INTRO -->
+    <section class="room active intro" data-room="0">
+      <div class="intro-inner">
+        <div class="tiny-label">A PRIVATE COLLECTION · MADE WITH LOVE</div>
+        <div class="intro-hero-img">
+          <img id="introImage" alt="Welcome Image">
+        </div>
+        <div class="big-heart">♥</div>
+        <h1>Welcome to<br><em>our little museum.</em></h1>
+        <blockquote class="room-quote" id="quoteIntro"></blockquote>
+        <p id="introText"></p>
+        <button class="enter" onclick="showRoom(1)">Enter the museum <span>→</span></button>
+        <div class="scroll-note">eight little rooms · one very big feeling</div>
+      </div>
+    </section>
+
+    <!-- ROOM 1: REASONS -->
+    <section class="room reasons" data-room="1">
+      <div class="room-inner">
+        <div class="room-meta"><span>ROOM 01</span><span>THE REASONS ROOM</span></div>
+        <div class="reason-layout">
+          <div>
+            <div class="room-symbol">♡</div>
+            <h2>Little things<br><em>I love about you.</em></h2>
+            <blockquote class="room-quote" id="quoteReasons"></blockquote>
+            <p class="lead">Some things are too small to make a speech about. They're still worth putting on a wall.</p>
+            <div class="section-thumb">
+              <img id="reasonsImg" alt="Reasons Memory">
+            </div>
+          </div>
+          <div class="reasons-list">
+            <article><span>01</span><p id="message1"></p></article>
+            <article><span>02</span><p id="message2"></p></article>
+            <article><span>03</span><p id="message3"></p></article>
+          </div>
+        </div>
+        <button class="next-room" onclick="showRoom(2)">Next room <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- ROOM 2: MEMORY -->
+    <section class="room memory" data-room="2">
+      <div class="room-inner centered">
+        <div class="room-meta"><span>ROOM 02</span><span>THE MEMORY ROOM</span></div>
+        <div class="memory-object">
+          <img id="memoryImg" alt="Unforgettable Moment" class="memory-circle-img">
+        </div>
+        <div class="tiny-label">A MEMORY WITHOUT A DATE</div>
+        <h2>The ordinary moments<br><em>became my favourite ones.</em></h2>
+        <blockquote class="room-quote" id="quoteMemory"></blockquote>
+        <p class="large-copy" id="memoryText"></p>
+        <button class="next-room" onclick="showRoom(3)">Keep walking <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- ROOM 3: SILLY ROOM -->
+    <section class="room laughs" data-room="3">
+      <div class="room-inner">
+        <div class="room-meta"><span>ROOM 03</span><span>THE SILLY ROOM</span></div>
+        <div class="laugh-layout">
+          <div class="laugh-content">
+            <div class="tiny-label">EXHIBIT A · OUR TERRIBLE JOKES</div>
+            <h2>For the laughs<br><em>that make no sense.</em></h2>
+            <blockquote class="room-quote" id="quoteSilly"></blockquote>
+            <div class="bubbles">
+              <div class="bubble">Our jokes are probably terrible.</div>
+              <div class="bubble right">I still want to hear every single one. 😂</div>
+              <div class="bubble">Especially the ones nobody else understands.</div>
+            </div>
+            <p class="small-note">No one else has to understand us. That's kind of the point.</p>
+          </div>
+          <div class="silly-image-wrap">
+            <img id="sillyImg" alt="Funny memory">
+          </div>
+        </div>
+        <button class="next-room" onclick="showRoom(4)">Next room <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- ROOM 4: PROMISES -->
+    <section class="room promises" data-room="4">
+      <div class="room-inner">
+        <div class="room-meta"><span>ROOM 04</span><span>THE PROMISE ROOM</span></div>
+        <div class="promise-layout">
+          <div>
+            <div class="room-symbol">∞</div>
+            <h2>Things I want<br><em>you to know.</em></h2>
+            <blockquote class="room-quote" id="quotePromises"></blockquote>
+            <div class="promise-img-frame">
+              <img id="promiseImg" alt="A Promise">
+            </div>
+          </div>
+          <div class="promise-list">
+            <div><b>01</b><span>I'll keep choosing us.</span></div>
+            <div><b>02</b><span>I'll celebrate your small wins.</span></div>
+            <div><b>03</b><span>I'll be there for the quiet days too.</span></div>
+            <div><b>04</b><span>I'll never stop being grateful that I found you.</span></div>
+          </div>
+        </div>
+        <button class="next-room" onclick="showRoom(5)">Next room <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- ROOM 5: COLLAGE GALLERY -->
+    <section class="room gallery" data-room="5">
+      <div class="room-inner">
+        <div class="room-meta"><span>ROOM 05</span><span>THE COLLAGE ROOM</span></div>
+        <div class="gallery-header">
+          <div class="tiny-label">A MOSAIC OF US</div>
+          <h2>Scattered snapshots,<br><em>endless memories.</em></h2>
+          <blockquote class="room-quote" id="quoteCollage"></blockquote>
+        </div>
+        <div class="collage-grid">
+          <div class="polaroid p1">
+            <img id="collage1" alt="Collage Photo 1">
+            <span id="caption1">First laugh</span>
+          </div>
+          <div class="polaroid p2">
+            <img id="collage2" alt="Collage Photo 2">
+            <span id="caption2">Late night talks</span>
+          </div>
+          <div class="polaroid p3">
+            <img id="collage3" alt="Collage Photo 3">
+            <span id="caption3">Adventures together</span>
+          </div>
+          <div class="polaroid p4">
+            <img id="collage4" alt="Collage Photo 4">
+            <span id="caption4">My favourite smile</span>
+          </div>
+        </div>
+        <button class="next-room" onclick="showRoom(6)">Next room <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- ROOM 6: VIDEO EXHIBIT -->
+    <section class="room video-room" data-room="6">
+      <div class="room-inner centered">
+        <div class="room-meta"><span>ROOM 06</span><span>THE CINEMA ROOM</span></div>
+        <div class="tiny-label">MOVING PICTURES & AUDIO MOMENTS</div>
+        <h2>Moments in<br><em>motion.</em></h2>
+        <blockquote class="room-quote" id="quoteVideo"></blockquote>
+        
+        <div class="video-container">
+          <iframe id="videoPlayer" src="" title="Video Exhibit" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-links">
+          <span>Watch full clips & playlists online:</span>
+          <div class="link-buttons">
+            <a id="videoLink1" href="#" target="_blank" class="v-link">▶ Watch Clip 1</a>
+            <a id="videoLink2" href="#" target="_blank" class="v-link">▶ Watch Clip 2</a>
+          </div>
+        </div>
+
+        <button class="next-room" onclick="showRoom(7)">Open the final room <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- ROOM 7: SEALED LETTER -->
+    <section class="room letter-room" data-room="7">
+      <div class="room-inner centered">
+        <div class="room-meta"><span>ROOM 07</span><span>THE SEALED LETTER</span></div>
+        
+        <div class="letter-layout">
+          <div class="envelope-wrap" onclick="openLetter()">
+            <div class="envelope">
+              <div class="paper">♥<small>FOR YOU</small></div>
+              <div class="seal">♥</div>
+            </div>
+          </div>
+          <div class="letter-side-img">
+            <img id="letterSideImg" alt="Letter Image">
+          </div>
+        </div>
+
+        <div class="tiny-label">THE LAST EXHIBIT</div>
+        <h2>Something I<br><em>needed to say.</em></h2>
+        <blockquote class="room-quote" id="quoteLetter"></blockquote>
+        <p class="lead">There's one last thing in this museum. Click the envelope when you're ready.</p>
+        <button class="open-letter" onclick="openLetter()">Break the seal ♥</button>
+      </div>
+    </section>
+
+    <!-- ENDING -->
+    <section class="room ending" data-room="8">
+      <div class="room-inner centered">
+        <div class="ending-img-wrap">
+          <img id="endingImg" alt="Forever & Always">
+        </div>
+        <div class="big-heart">♥</div>
+        <div class="tiny-label">THE COLLECTION IS COMPLETE</div>
+        <h2>That's the whole museum.<br><em>But not the whole story.</em></h2>
+        <blockquote class="room-quote" id="quoteEnding"></blockquote>
+        <p class="large-copy">There will always be another memory, another laugh, another reason.</p>
+        <button class="enter" onclick="showRoom(1)">Walk through it again ↺</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom-nav">
+    <button onclick="previousRoom()">←</button>
+    <div class="dots" id="dots"></div>
+    <button onclick="nextRoom()">→</button>
+  </div>
+
+  <!-- LETTER MODAL -->
+  <div id="letterModal" class="modal">
+    <div class="modal-bg" onclick="closeLetter()"></div>
+    <div class="letter-card">
+      <button class="close" onclick="closeLetter()">×</button>
+      <div class="letter-kicker">A LETTER FOR <span id="letterTo"></span></div>
+      <div class="paper-sheet">
+        <p id="letter"></p>
+        <div class="signature">Always,<br><strong id="from"></strong> ♥</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
