@@ -28,7 +28,7 @@ const MUSEUM = {
   introImage: "./assets/1.png",
 
   // Room 1: Reasons
-  reasonsImg: "./assets/8.PNG",
+  reasonsImg: "./assets/8.png",
   message1: "I rarely mention it, but I see everything you do for this relationship, even the little things.",
   message2: "You're still the best part of my everyday, even on the completely ordinary days.",
   message3: "I keep finding new little reasons to fall for you, probably more often than you know.",
